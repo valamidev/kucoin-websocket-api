@@ -5,7 +5,8 @@ Fault tolerant auto-reconnecting Websocket API for Kucoin!
 **Features**
 - Auto-reconnecting Websocket it can handle network outage or server disconnections!
 - Websocket can be closed any time with a single fn.call()
-- Async/Await ready!
+- Async/Await ready
+- It has similar implementation like the binance-api-node
 
 **DEVELOPMENT STATE:**
 - This package give support only for Public endpoint.
