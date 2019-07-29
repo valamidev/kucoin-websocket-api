@@ -6,7 +6,7 @@ const client = new Kucoin()
 const symbols = ["BTC-USDT", "ETH-BTC"]
 
 let test = async () => {
-  let connection = await client.MarketMatches(symbols, (e) => {
+  let connection = await client.MarketLevel2(symbols, (e) => {
     console.log(e)
   })
 

@@ -1,6 +1,6 @@
 "use strict"
 
-const { openMarketMatches } = require("./src/websocket")
+const { openMarketMatches, openMarketLevel2 } = require("./src/websocket")
 const axios = require("axios")
 
 class Kucoin_API {
@@ -12,6 +12,15 @@ class Kucoin_API {
     let endpoint = await this.getSocketEndpoint()
 
     let result = await openMarketMatches(endpoint, symbols, callback)
+
+    // Return Close function
+    return result
+  }
+
+  async MarketLevel2(symbols, callback) {
+    let endpoint = await this.getSocketEndpoint()
+
+    let result = await openMarketLevel2(endpoint, symbols, callback)
 
     // Return Close function
     return result

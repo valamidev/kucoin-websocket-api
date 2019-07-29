@@ -117,3 +117,11 @@ test("Get connection endpoint", async () => {
 
   connection()
 })
+
+test("Get connection endpoint", async () => {
+  let connection = await client.MarketLevel2(symbols, () => {})
+
+  expect(connection).toBeInstanceOf(Function)
+
+  connection()
+})
