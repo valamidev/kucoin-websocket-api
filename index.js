@@ -41,8 +41,9 @@ class Kucoin_API {
     r = await this.getPublicWsToken()
 
     let token = r.data.token
+    let endpoint = r.data.instanceServers[0].endpoint
 
-    return `wss://push1-v2.kucoin.com/endpoint?token=${token}&[connectId=${Date.now()}]`
+    return `${endpoint}?token=${token}&[connectId=${Date.now()}]`
   }
 }
 
